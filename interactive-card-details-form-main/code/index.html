@@ -13,11 +13,88 @@
     <title>Interactive card details form</title>
   </head>
   <body>
-    <div class="background">
+    <div class="content">
       <img
+        class="bg-big"
         src="/interactive-card-details-form-main/images/bg-main-desktop.png"
         alt="bg-main-desktop"
       />
+
+      <div class="right-side">
+        <form class="card-input-form" action="">
+          <div class="card-input-form">
+            <label for="name">CARDHOLDER NAME</label>
+            <input
+              type="text"
+              name="name"
+              id="name"
+              placeholder="e.g. Jane Appleseed"
+              required
+            />
+          </div>
+          <div class="card-input-form">
+            <label for="number">CARD NUMBER</label>
+            <input
+              type="number"
+              name="number"
+              id="number"
+              max="16"
+              placeholder="e.g. 1234 5678 9123 0000"
+              required
+            />
+          </div>
+          <div class="row-date-cvc">
+            <div class="card-input-form">
+              <label for="date">EXP. DATE(MM/YY)</label>
+              <div class="exp-date">
+                <input
+                  type="year"
+                  name="month"
+                  id="month"
+                  maxlength="2"
+                  placeholder="MM"
+                  required
+                />
+                <input
+                  type="year"
+                  name="year"
+                  id="year"
+                  maxlength="2"
+                  placeholder="YY"
+                  required
+                />
+              </div>
+            </div>
+            <div class="card-input-form cvc">
+              <label for="cvc">CVC</label>
+              <input
+                type="number"
+                name="cvc"
+                id="cvc"
+                maxlength="3"
+                placeholder="e.g. 123"
+                required
+              />
+            </div>
+          </div>
+          <div class="card-input-form">
+            <input class="submit-btn" type="submit" value="Confirm" />
+          </div>
+        </form>
+      </div>
+
+      <div class="cards">
+        <img
+          class="card-front"
+          src="/interactive-card-details-form-main/images/bg-card-front.png"
+          alt="bg-card-front"
+        />
+        <img
+          class="card-back"
+          src="/interactive-card-details-form-main/images/bg-card-back.png"
+          alt="bg-card-back"
+        />
+      </div>
     </div>
   </body>
 </html>
