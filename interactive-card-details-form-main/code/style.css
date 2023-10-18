@@ -39,8 +39,6 @@ form {
 
 .row-date-cvc {
   display: flex;
-  flex-direction: row;
-  gap: 1rem;
 }
 
 .card-input-form input {
@@ -70,11 +68,11 @@ form {
 }
 
 .card-input-form .exp-date input {
-  width: 25%;
+  width: 100%;
 }
 
 .card-input-form .cvc input {
-  width: 75%;
+  width: 100%;
 }
 
 .submit-btn {
@@ -95,13 +93,26 @@ form {
   gap: 2rem;
 }
 
-.card-back {
+.card-back-img {
   width: 100%;
   margin-left: 200px;
 }
 
-.card-back,
-.card-front {
+.card-back-img,
+.card-front-img {
+  position: relative;
   max-width: 25rem;
-  min-width: 20rem;
+  min-width: 300px;
+}
+
+.content-front {
+  position: absolute;
+  z-index: 1000;
+  left: 30%;
+  bottom: 60%;
+  color: white;
+}
+.content-front .nameAndDate {
+  display: flex;
+  justify-content: space-between;
 }
