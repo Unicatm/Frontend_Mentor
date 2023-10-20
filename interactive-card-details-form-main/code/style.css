@@ -55,8 +55,7 @@ form {
   display: flex;
   flex-direction: column;
   gap: 2rem;
-  max-width: 35rem;
-  min-width: 500px;
+  max-width: 28rem;
 }
 
 .card-input-form {
@@ -71,7 +70,7 @@ form {
 
 .card-input-form input {
   font-family: "Space Grotesk", sans-serif;
-  font-size: 18px;
+  font-size: 16px;
   padding: 1rem;
   border-radius: 0.5rem;
   border: 1px solid var(--clr-dark-gray);
@@ -85,13 +84,15 @@ form {
 }
 
 .card-input-form label {
+  font-size: 16px;
   color: var(--clr-dark-violet);
   cursor: text;
 }
 
 .card-input-form .exp-date {
-  display: flex;
-  justify-content: left;
+  position: relative;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
   gap: 1rem;
   padding-right: 2rem;
 }
@@ -100,7 +101,7 @@ form {
   width: 100%;
 }
 
-.card-input-form .cvc input {
+.card-input-form .cvc {
   width: 100%;
 }
 
@@ -134,6 +135,7 @@ form {
 .card-front-img {
   display: block;
   border: 2px solid rgb(77, 255, 0);
+  width: 350px;
 }
 
 .content-front > *:not(.card-front-img),
@@ -149,25 +151,28 @@ form {
 }
 
 .card-number {
-  font-size: 1.8rem;
+  font-size: 1.3rem;
   letter-spacing: 2px;
   left: var(--padding-card);
   top: 50%;
 }
 
 .card-name {
+  font-size: 0.8rem;
   bottom: var(--padding-card);
   left: var(--padding-card);
 }
 
 .card-date {
+  font-size: 0.8rem;
   bottom: var(--padding-card);
   right: var(--padding-card);
 }
 
 .card-cvv {
-  bottom: 46%;
-  right: 4rem;
+  font-size: 0.8rem;
+  bottom: 13vh;
+  right: 3vw;
 }
 
 @media (max-width: 768px) {
@@ -177,14 +182,13 @@ form {
 
   .cardAndForm {
     flex-direction: column;
-    justify-content: space-between;
     align-items: center;
-    gap: 0;
+    gap: 5vh;
   }
 
   form {
+    margin: 1rem;
     max-width: 100%;
-    min-width: 400px;
     gap: 1.5rem;
     padding-bottom: 1vh;
     border: 5px solid turquoise;
@@ -192,7 +196,6 @@ form {
 
   .right-side {
     border: 5px solid blue;
-    height: 70%;
   }
 
   .card-input-form {
@@ -201,7 +204,7 @@ form {
 
   .cards {
     position: relative;
-    height: 40vh;
+    height: 30vh;
     width: 100%;
   }
 
@@ -213,17 +216,42 @@ form {
   .content-back,
   .content-front {
     position: absolute;
-    min-width: 200px;
+  }
+
+  .card-back-img,
+  .card-front-img {
+    width: 300px;
+  }
+
+  .card-number {
+    font-size: 1rem;
+    left: 1.5rem;
+  }
+
+  .card-name,
+  .card-date {
+    font-size: 0.8rem;
+  }
+  .card-name {
+    left: 1.5rem;
+  }
+  .card-date {
+    right: 1.5rem;
+  }
+
+  .card-cvv {
+    bottom: 5.75vh;
+    right: 10vw;
   }
 
   .content-front {
     z-index: 1000;
     bottom: 0;
-    left: 2rem;
+    left: 1rem;
   }
 
   .content-back {
-    left: 9rem;
+    left: 4rem;
     bottom: 8rem;
   }
 
