@@ -1,5 +1,15 @@
 @import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500&display=swap");
 
+:root {
+  --clr--white: hsl(0, 0%, 100%);
+  --clr--gray: hsl(270, 3%, 87%);
+  --clr-dark-gray: hsl(279, 6%, 55%);
+  --clr-dark-violet: hsl(278, 68%, 11%);
+
+  --border-violet: hsl(249, 99%, 64%);
+  --border-dark-violet: hsl(278, 94%, 30%);
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -9,32 +19,50 @@
 body {
   font-family: "Space Grotesk", sans-serif;
   font-size: 18px;
+  overflow-y: hidden;
+}
+
+.img-bg {
+  display: block;
+  position: absolute;
+  width: 30%;
+  height: 100%;
+  background-image: url("/interactive-card-details-form-main/images/bg-main-desktop.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-radius: 3px solid blue;
 }
 
 .content {
   display: flex;
 }
 
+.cardAndForm {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15vw;
+}
+
 .right-side {
   display: grid;
   place-items: center;
-  width: 100vw;
-}
-
-.bg-big {
-  display: block;
-  position: relative;
 }
 
 form {
-  width: 30em;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  max-width: 35rem;
+  min-width: 500px;
 }
 
 .card-input-form {
   display: flex;
   flex-direction: column;
   gap: 1rem;
-  padding: 1rem;
 }
 
 .row-date-cvc {
@@ -46,18 +74,18 @@ form {
   font-size: 18px;
   padding: 1rem;
   border-radius: 0.5rem;
-  border: 1px solid hsl(279, 6%, 55%);
+  border: 1px solid var(--clr-dark-gray);
   transition: all ease-in-out 150ms;
 }
 
 .card-input-form input:focus {
   outline: none;
-  border-color: hsl(249, 99%, 64%) hsl(249, 99%, 64%) hsl(278, 94%, 30%)
-    hsl(278, 94%, 30%);
+  border-color: var(--border-violet) var(--border-violet)
+    var(--border-dark-violet) var(--border-dark-violet);
 }
 
 .card-input-form label {
-  color: hsl(278, 68%, 11%);
+  color: var(--clr-dark-violet);
   cursor: text;
 }
 
@@ -65,6 +93,7 @@ form {
   display: flex;
   justify-content: left;
   gap: 1rem;
+  padding-right: 2rem;
 }
 
 .card-input-form .exp-date input {
@@ -77,42 +106,130 @@ form {
 
 .submit-btn {
   cursor: pointer;
-  color: white;
+  color: var(--clr--white);
   background-color: hsl(278, 68%, 11%);
   border: none;
 }
 
 .cards {
-  display: grid;
-  align-content: center;
-  place-items: center;
-  height: 100vh;
-  margin: 0;
-  position: absolute;
-  left: 5em;
-  gap: 2rem;
+  --padding-card: 2rem;
+
+  display: block;
+  border: 5px solid red;
+  z-index: 100000;
 }
 
-.card-back-img {
-  width: 100%;
-  margin-left: 200px;
+.content-front,
+.content-back {
+  position: relative;
+  max-width: min-content;
+}
+
+.content-back {
+  top: var(--padding-card);
+  left: 8rem;
 }
 
 .card-back-img,
 .card-front-img {
-  position: relative;
-  max-width: 25rem;
-  min-width: 300px;
+  display: block;
+  border: 2px solid rgb(77, 255, 0);
 }
 
-.content-front {
+.content-front > *:not(.card-front-img),
+.content-back > *:not(.card-back-img) {
   position: absolute;
   z-index: 1000;
-  left: 30%;
-  bottom: 60%;
-  color: white;
+  color: var(--clr--white);
 }
-.content-front .nameAndDate {
-  display: flex;
-  justify-content: space-between;
+
+.card-front-logo {
+  top: var(--padding-card);
+  left: var(--padding-card);
+}
+
+.card-number {
+  font-size: 1.8rem;
+  letter-spacing: 2px;
+  left: var(--padding-card);
+  top: 50%;
+}
+
+.card-name {
+  bottom: var(--padding-card);
+  left: var(--padding-card);
+}
+
+.card-date {
+  bottom: var(--padding-card);
+  right: var(--padding-card);
+}
+
+.card-cvv {
+  bottom: 46%;
+  right: 4rem;
+}
+
+@media (max-width: 768px) {
+  body {
+    overflow-y: scroll;
+  }
+
+  .cardAndForm {
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    gap: 0;
+  }
+
+  form {
+    max-width: 100%;
+    min-width: 400px;
+    gap: 1.5rem;
+    padding-bottom: 1vh;
+    border: 5px solid turquoise;
+  }
+
+  .right-side {
+    border: 5px solid blue;
+    height: 70%;
+  }
+
+  .card-input-form {
+    gap: 0.75rem;
+  }
+
+  .cards {
+    position: relative;
+    height: 40vh;
+    width: 100%;
+  }
+
+  .card-input-form .exp-date {
+    gap: 0.75rem;
+    padding-right: 1rem;
+  }
+
+  .content-back,
+  .content-front {
+    position: absolute;
+    min-width: 200px;
+  }
+
+  .content-front {
+    z-index: 1000;
+    bottom: 0;
+    left: 2rem;
+  }
+
+  .content-back {
+    left: 9rem;
+    bottom: 8rem;
+  }
+
+  .img-bg {
+    width: 100%;
+    height: 30%;
+    background-image: url("/interactive-card-details-form-main/images/bg-main-mobile.png");
+  }
 }

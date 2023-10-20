@@ -14,97 +14,117 @@
   </head>
   <body>
     <div class="content">
-      <img
-        class="bg-big"
-        src="/interactive-card-details-form-main/images/bg-main-desktop.png"
-        alt="bg-main-desktop"
-      />
-
-      <div class="right-side">
-        <form class="card-input-form" action="">
-          <div class="card-input-form">
-            <label for="name">CARDHOLDER NAME</label>
-            <input
-              type="text"
-              name="name"
-              id="name"
-              placeholder="e.g. Jane Appleseed"
-              required
+      <!--<picture class="bg-big"> </picture>-->
+      <!-- <picture class="bg-big"
+        ><img
+          src="/interactive-card-details-form-main/images/bg-main-desktop.png"
+          alt="bg"
+        />
+      </picture>
+      <picture class="imgs">
+        <source
+          media="(max-width: 768px)"
+          srcset="/interactive-card-details-form-main/images/bg-main-mobile.png"
+        />
+        <source
+          media="(max-width: 2560px)"
+          srcset="
+            /interactive-card-details-form-main/images/bg-main-desktop.png
+          "
+        />
+        <img
+          src="/interactive-card-details-form-main/images/bg-main-desktop.png"
+          alt="bg"
+        />
+      </picture>-->
+      <div class="img-bg"></div>
+      <div class="cardAndForm">
+        <div class="cards">
+          <div class="content-front">
+            <img
+              class="card-front-logo"
+              src="/interactive-card-details-form-main/images/card-logo.svg"
+              alt="logo-card-front"
+            />
+            <span class="card-number">0000 0000 0000 000E</span>
+            <span class="card-name">FELICIA LEIRE</span>
+            <span class="card-date">01/00</span>
+            <img
+              class="card-front-img"
+              src="/interactive-card-details-form-main/images/bg-card-front.png"
+              alt="bg-card-front"
             />
           </div>
-          <div class="card-input-form">
-            <label for="number">CARD NUMBER</label>
-            <input
-              type="number"
-              name="number"
-              id="number"
-              max="16"
-              placeholder="e.g. 1234 5678 9123 0000"
-              required
+          <div class="content-back">
+            <span class="card-cvv">000</span>
+            <img
+              class="card-back-img"
+              src="/interactive-card-details-form-main/images/bg-card-back.png"
+              alt="bg-card-back"
             />
           </div>
-          <div class="row-date-cvc">
+        </div>
+        <div class="right-side">
+          <form action="">
             <div class="card-input-form">
-              <label for="date">EXP. DATE(MM/YY)</label>
-              <div class="exp-date">
+              <label for="name">CARDHOLDER NAME</label>
+              <input
+                type="text"
+                name="name"
+                id="name"
+                placeholder="e.g. Jane Appleseed"
+                required
+              />
+            </div>
+            <div class="card-input-form">
+              <label for="number">CARD NUMBER</label>
+              <input
+                type="number"
+                name="number"
+                id="number"
+                max="16"
+                placeholder="e.g. 1234 5678 9123 0000"
+                required
+              />
+            </div>
+            <div class="row-date-cvc">
+              <div class="card-input-form">
+                <label for="date">EXP. DATE(MM/YY)</label>
+                <div class="exp-date">
+                  <input
+                    type="year"
+                    name="month"
+                    id="month"
+                    maxlength="2"
+                    placeholder="MM"
+                    required
+                  />
+                  <input
+                    type="year"
+                    name="year"
+                    id="year"
+                    maxlength="2"
+                    placeholder="YY"
+                    required
+                  />
+                </div>
+              </div>
+              <div class="card-input-form cvc">
+                <label for="cvc">CVC</label>
                 <input
-                  type="year"
-                  name="month"
-                  id="month"
-                  maxlength="2"
-                  placeholder="MM"
-                  required
-                />
-                <input
-                  type="year"
-                  name="year"
-                  id="year"
-                  maxlength="2"
-                  placeholder="YY"
+                  type="number"
+                  name="cvc"
+                  id="cvc"
+                  maxlength="3"
+                  placeholder="e.g. 123"
                   required
                 />
               </div>
             </div>
-            <div class="card-input-form cvc">
-              <label for="cvc">CVC</label>
-              <input
-                type="number"
-                name="cvc"
-                id="cvc"
-                maxlength="3"
-                placeholder="e.g. 123"
-                required
-              />
+            <div class="card-input-form">
+              <input class="submit-btn" type="submit" value="Confirm" />
             </div>
-          </div>
-          <div class="card-input-form">
-            <input class="submit-btn" type="submit" value="Confirm" />
-          </div>
-        </form>
-      </div>
-
-      <div class="cards">
-        <div class="content-front">
-          <p class="card-number">0000 0000 0000 000E</p>
-          <div class="nameAndDate">
-            <p class="card-name">FELICIA LEIRE</p>
-            <p class="card-date">01/00</p>
-          </div>
-        </div>
-        <div class="card-front">
-          <img
-            class="card-front-img"
-            src="/interactive-card-details-form-main/images/bg-card-front.png"
-            alt="bg-card-front"
-          />
-        </div>
-        <div class="content-back">
-          <p class="card-cvv">000</p>
-          <img
-            class="card-back-img"
-            src="/interactive-card-details-form-main/images/bg-card-back.png"
-            alt="bg-card-back"
-          />
+          </form>
         </div>
       </div>
     </div>
