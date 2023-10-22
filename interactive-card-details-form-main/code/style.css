@@ -103,7 +103,7 @@ form {
   color: var(--clr--white);
   background-color: var(--clr-dark-violet);
   border: none;
-  transition: ease-in-out 0.5s;
+  transition: background-color ease 0.8s;
 }
 
 .submit-btn:hover,

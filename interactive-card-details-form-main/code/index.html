@@ -13,29 +13,6 @@
     <title>Interactive card details form</title>
   </head>
   <body>
-    <!--<picture class="bg-big"> </picture>-->
-    <!-- <picture class="bg-big"
-        ><img
-          src="/interactive-card-details-form-main/images/bg-main-desktop.png"
-          alt="bg"
-        />
-      </picture>
-      <picture class="imgs">
-        <source
-          media="(max-width: 768px)"
-          srcset="/interactive-card-details-form-main/images/bg-main-mobile.png"
-        />
-        <source
-          media="(max-width: 2560px)"
-          srcset="
-            /interactive-card-details-form-main/images/bg-main-desktop.png
-          "
-        />
-        <img
-          src="/interactive-card-details-form-main/images/bg-main-desktop.png"
-          alt="bg"
-        />
-      </picture>-->
     <div class="content">
       <div class="img-bg"></div>
       <div class="cardAndForm">
@@ -46,9 +23,11 @@
               src="/interactive-card-details-form-main/images/card-logo.svg"
               alt="logo-card-front"
             />
-            <span class="card-number">0000 0000 0000 000E</span>
-            <span class="card-name">FELICIA LEIRE</span>
-            <span class="card-date">01/00</span>
+            <span id="onCard" class="card-name">FELICIA LEIRE</span>
+            <span id="onCard" class="card-number">0000 0000 0000 000E</span>
+            <span class="card-date"
+              ><span id="onCard">01</span><span id="onCard">23</span></span
+            >
             <img
               class="card-front-img"
               src="/interactive-card-details-form-main/images/bg-card-front.png"
@@ -56,7 +35,7 @@
             />
           </div>
           <div class="content-back">
-            <span class="card-cvv">000</span>
+            <span id="onCard" class="card-cvv">000</span>
             <img
               class="card-back-img"
               src="/interactive-card-details-form-main/images/bg-card-back.png"
@@ -71,7 +50,7 @@
               <input
                 type="text"
                 name="name"
-                id="name"
+                id="inputCard"
                 placeholder="e.g. Jane Appleseed"
                 required
               />
@@ -81,7 +60,7 @@
               <input
                 type="number"
                 name="number"
-                id="number"
+                id="inputCard"
                 max="16"
                 placeholder="e.g. 1234 5678 9123 0000"
                 required
@@ -94,7 +73,7 @@
                   <input
                     type="year"
                     name="month"
-                    id="month"
+                    id="inputCard"
                     maxlength="2"
                     placeholder="MM"
                     required
@@ -102,7 +81,7 @@
                   <input
                     type="year"
                     name="year"
-                    id="year"
+                    id="inputCard"
                     maxlength="2"
                     placeholder="YY"
                     required
@@ -115,7 +94,7 @@
                   class="cvc"
                   type="number"
                   name="cvc"
-                  id="cvc"
+                  id="inputCard"
                   maxlength="3"
                   placeholder="e.g. 123"
                   required
@@ -129,5 +108,7 @@
         </div>
       </div>
     </div>
+
+    <script src="index.js"></script>
   </body>
 </html>
