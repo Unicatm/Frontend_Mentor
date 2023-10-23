@@ -21,6 +21,10 @@ body {
   font-size: 18px;
 }
 
+.upper {
+  text-transform: uppercase;
+}
+
 .img-bg {
   display: block;
   position: absolute;
@@ -68,6 +72,10 @@ form {
   border-radius: 0.5rem;
   border: 1px solid var(--clr-dark-gray);
   transition: all ease-in-out 150ms;
+}
+
+.card-input-form input:invalid {
+  /* border-color: hsl(0, 100%, 66%); */
 }
 
 .card-input-form input:focus {
@@ -161,12 +169,15 @@ form {
   font-size: 0.8rem;
   bottom: var(--padding-card);
   left: var(--padding-card);
+  text-transform: uppercase;
+  letter-spacing: 2px;
 }
 
 .card-date {
   font-size: 0.8rem;
   bottom: var(--padding-card);
   right: var(--padding-card);
+  letter-spacing: 2px;
 }
 
 .card-cvv {
