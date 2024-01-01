@@ -20,18 +20,26 @@
         <p>Your cart is empty</p>
       </div>
       <div class="left-menu">
-        <img
+        <div class="menu-icon">
+          <div></div>
+          <div></div>
+          <div></div>
+        </div>
+        <!-- <img
+          class="menu-icon"
           src="/ecommerce-product-page-main/images/icon-menu.svg"
           alt="menu-icon"
-        />
+        /> -->
         <h1>sneakers</h1>
-        <ul class="links">
-          <li>Collections</li>
-          <li>Men</li>
-          <li>Women</li>
-          <li>About</li>
-          <li>Contact</li>
-        </ul>
+        <div class="links-container">
+          <ul class="links">
+            <li>Collections</li>
+            <li>Men</li>
+            <li>Women</li>
+            <li>About</li>
+            <li>Contact</li>
+          </ul>
+        </div>
       </div>
 
       <div class="profile">
@@ -114,11 +122,13 @@
         <div class="buttons">
           <div class="quantity">
             <img
+              class="minus-btn"
               src="/ecommerce-product-page-main/images/icon-minus.svg"
               alt="minus"
             />
-            <span>3</span>
+            <span>0</span>
             <img
+              class="plus-btn"
               src="/ecommerce-product-page-main/images/icon-plus.svg"
               alt="plus"
             />
@@ -133,5 +143,6 @@
         </div>
       </div>
     </section>
+    <script src="script.js"></script>
   </body>
 </html>
