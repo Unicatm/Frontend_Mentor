@@ -14,12 +14,16 @@
     <title>Frontend Mentor | E-commerce product page</title>
   </head>
   <body>
-    <div class="cart-menu">
-      <h2>Cart</h2>
-      <p>Your cart is empty</p>
-    </div>
     <nav>
+      <div class="cart-menu">
+        <h2>Cart</h2>
+        <p>Your cart is empty</p>
+      </div>
       <div class="left-menu">
+        <img
+          src="/ecommerce-product-page-main/images/icon-menu.svg"
+          alt="menu-icon"
+        />
         <h1>sneakers</h1>
         <ul class="links">
           <li>Collections</li>
@@ -45,11 +49,27 @@
     </nav>
     <section class="product-page">
       <div class="gallery">
-        <img
-          class="big-img"
-          src="\ecommerce-product-page-main\images\image-product-1.jpg"
-          alt=""
-        />
+        <div class="modala">
+          <div class="left-btn">
+            <img
+              src="/ecommerce-product-page-main/images/icon-previous.svg"
+              alt="prev-btn"
+            />
+          </div>
+
+          <img
+            class="big-img"
+            src="\ecommerce-product-page-main\images\image-product-1.jpg"
+            alt=""
+          />
+          <div class="right-btn">
+            <img
+              src="/ecommerce-product-page-main/images/icon-next.svg"
+              alt="next-btn"
+            />
+          </div>
+        </div>
+
         <!-- <div class="small-imgs"> -->
         <img
           class="sm-img first active-img"
@@ -73,6 +93,7 @@
         />
         <!-- </div> -->
       </div>
+
       <div class="details">
         <div class="text">
           <h3>Sneaker Company</h3>
