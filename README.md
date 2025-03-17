@@ -8,7 +8,7 @@ This project includes two [Frontend Mentor](https://www.frontendmentor.io/) UI i
   Practiced DOM manipulation and responsive design by implementing a dynamic card details form.  
 
 - **E-Commerce Product Page**  
-  Developed a product page with a lightbox gallery and cart functionality.  
+  Developed a product page with a gallery and cart functionality.  
 
 ## Technologies Used  
 
