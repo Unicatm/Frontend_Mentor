@@ -1,6 +1,6 @@
 # Frontend Mentor - Coding Practice with Ready-Designed UIs  
 
-This project includes two [Frontend Mentor]([https://pages.github.com/](https://www.frontendmentor.io/)) UI implementations using JavaScript, CSS3, and HTML5.  
+This project includes two [Frontend Mentor](https://www.frontendmentor.io/) UI implementations using JavaScript, CSS3, and HTML5.  
 
 ## Features  
 
